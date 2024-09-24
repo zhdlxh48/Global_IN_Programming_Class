@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .top-nav {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        var isHidden = false;
+        var elvis;
+
+        function switch_state() {
+            if (elvis.classList.contains("hide")) {
+                elvis.classList.remove("hide");
+                //document.getElementById("elvis").src = "./img/Elvis_Presley_Jailhouse_Rock.jpg";
+                //isHidden = false;
+            } else {
+                elvis.classList.add("hide");
+                //document.getElementById("elvis").src = "";
+                //isHidden = true;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            elvis = document.getElementById("elvis");
+
+            document.getElementById("elvis_button").addEventListener("click", (e) => {
+                switch_state();
+            });
+        });
+
+    </script>
+    <title>Index Page</title>
+</head>
+
+<body>
+    <div class="top-nav">
+        <h1>
+            Welcome to webpage!
+        </h1>
+    </div>
+
+    <div>
+        ipsum dolor sit amet consectetur adipisicing elit. <span>Quisquam, quos.</span>
+    </div>
+
+    <hr>
+
+    <a href="https://github.com/zhdlxh48">My Github</a><br>
+    <a href="./pages/test.html">Go To Test</a><br>
+
+    <a href="https://www.dothome.co.kr/">
+        <img src="https://www.dothome.co.kr/static/images/_layout/logo.png" alt="logo">
+    </a><br>
+
+    <button id="elvis_button">BUTTON2</button><br>
+
+    <img id="elvis" src="./img/Elvis_Presley_Jailhouse_Rock.jpg" alt="Elvis Presley">
+
+    <!--This is test comment-->
+</body>
+
+</html>
