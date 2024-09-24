@@ -22,21 +22,25 @@
         }
     </style>
     <script type="text/javascript">
-        var isHidden = false;
         var elvis;
+
+        function enter() {
+            document.getElementById("elvis").src = "./img/Elvis_Presley_Jailhouse_Rock.jpg";
+        }
+
+        function leave() {
+            document.getElementById("elvis").src = "";
+        }
 
         function switch_state() {
             if (elvis.classList.contains("hide")) {
                 elvis.classList.remove("hide");
-                //document.getElementById("elvis").src = "./img/Elvis_Presley_Jailhouse_Rock.jpg";
-                //isHidden = false;
             } else {
                 elvis.classList.add("hide");
-                //document.getElementById("elvis").src = "";
-                //isHidden = true;
             }
         }
 
+        /*
         document.addEventListener('DOMContentLoaded', function () {
             elvis = document.getElementById("elvis");
 
@@ -44,6 +48,7 @@
                 switch_state();
             });
         });
+        */
 
     </script>
     <title>Index Page</title>
@@ -69,7 +74,8 @@
         <img src="https://www.dothome.co.kr/static/images/_layout/logo.png" alt="logo">
     </a><br>
 
-    <button id="elvis_button">BUTTON2</button><br>
+    <!--<button id="elvis_button">BUTTON2</button><br>-->
+    <div onmouseenter="enter()" onmouseleave="leave()">엘비스 뭐시기 호버</div>
 
     <img id="elvis" src="./img/Elvis_Presley_Jailhouse_Rock.jpg" alt="Elvis Presley">
 
