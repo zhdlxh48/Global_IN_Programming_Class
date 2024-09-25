@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            var video = document.querySelector('video');
+            video.volume = 0.1;
+
+            var audio = document.querySelector('audio');
+            audio.volume = 0.1;
+        });
+    </script>
+    <title>파일 다운로드</title>
+</head>
+
+<body>
+    <h3>파일 다운로드</h3>
+    <hr>
+
+    <ul>
+        <li><a href="../24-09-25/img/하츄핑.png" download>하츄핑</a></li>
+        <li><a href="../24-09-25/img/까르핑.png" download>까르핑</a></li>
+        <li><a href="../24-09-25/img/파란핑.png" download>파란핑</a></li>
+    </ul>
+    <hr>
+
+    <h3>Video</h3>
+    <video src="./video/higedan-no_doubt-video.mp4" width="640" height="480" controls></video>
+    <hr>
+
+    <h3>Audio</h3>
+    <audio src="./audio/higedan-no_doubt-audio.mp3" loop controls></audio>
+</body>
+
+</html>
