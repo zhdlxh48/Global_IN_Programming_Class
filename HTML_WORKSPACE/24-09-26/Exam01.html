@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            /* 높이를 100%로 설정, 100vh도 가능 */
+        }
+
+        hr {
+            margin: 10px 0px;
+        }
+    </style>
+
+    <style type="text/css">
+        /* sementic */
+        .header {
+            width: 100%;
+            height: 15%;
+            background-color: yellow;
+        }
+
+        .nav {
+            float: left;
+            /* left 대신 inline-start 사용 가능 */
+            width: 15%;
+            height: 70%;
+            background-color: orange;
+        }
+
+        .section {
+            float: left;
+            /* left 대신 inline-start 사용 가능 */
+            width: 70%;
+            height: 70%;
+            background-color: olivedrab;
+        }
+
+        .aside {
+            float: right;
+            /* right 대신 inline-end 사용 가능 */
+            width: 15%;
+            height: 70%;
+            background-color: orangered;
+        }
+
+        .footer {
+            clear: both;
+            /* float 이 되어있는 요소들을 건너뛰어 배치 */
+            width: 100%;
+            height: 15%;
+            background-color: pink;
+        }
+    </style>
+
+    <title>HTML5 구조</title>
+</head>
+
+<body>
+    <h1>HTML Sementic Structure</h1>
+    <header class="header">Sementic Header</header>
+    <nav class="nav">Sementic Navigation</nav>
+    <section class="section">Sementic Section</section>
+    <aside class="aside">Sementic Aside</aside>
+    <footer class="footer">Sementic Footer</footer>
+
+    <hr>
+
+    <h1>HTML Default Structure</h1>
+    <div id="header" class="header">div Header</div>
+    <div id="nav" class="nav">div Navigation</div>
+    <div id="section" class="section">div Section</div>
+    <div id="aside" class="aside">div Aside</div>
+    <div id="footer" class="footer">div Footer</div>
+</body>
+
+</html>

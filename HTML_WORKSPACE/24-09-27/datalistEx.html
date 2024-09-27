@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .elem {
+            margin: 10px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+    </style>
+    <title>데이터 목록을 가진 텍스트</title>
+</head>
+
+<body>
+    <h3>가보고 싶은 곳</h3>
+    <hr>
+    <form method="post" action="">
+        <div class="container">
+            <div class="elem">
+                <label type="text" for="countries">나라</label>
+                <input list="countries" name="country">
+                <datalist id="countries">
+                    <option value="japan">일본</option>
+                    <option value="canada">캐나다</option>
+                    <option value="hongkong">홍콩</option>
+                </datalist>
+            </div>
+            <div class="elem">
+                <label type="text" for="looking">보고싶은 것</label>
+                <input list="looking" name="looking">
+                <datalist id="looking">
+                    <option value="sakura">벚꽃</option>
+                    <option value="maple">우주</option>
+                    <option value="ocean">바다</option>
+                </datalist>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

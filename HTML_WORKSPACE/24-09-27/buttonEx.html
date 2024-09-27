@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼</title>
+
+    <script text="text/javascript">
+        function clickButton(content) {
+            alert(content + " 버튼을 클릭했습니다.");
+        }
+    </script>
+</head>
+
+<body>
+    <h3>버튼</h3>
+    <hr>
+    <form method="get" action="">
+        <div>
+            <label for="search">검색</label>
+            <input id="search" name="search" type="text" size="10">
+            <input id="button1" type="button" size="10" value="question">
+            <button id="button2" onclick="clickButton('button2')">question</button>
+
+        </div>
+        <div>
+            <label for="submit">Submit 버튼</label>
+            <input id="submit" type="submit" size="10" value="submit">
+            <button id="submit" type="submit" onclick="clickButton('Submit Button')">submit</button>
+
+        </div>
+        <div>
+            <label for="reset">Reset 버튼</label>
+            <input id="reset" type="button" size="10" value="reset">
+            <button id="reset" onclick="clickButton('Reset Button')">reset</button>
+        </div>
+        <div>
+            <label for="image">Image 버튼</label>
+            <input id="image" type="image" size="10" width="50" height="50" src="./img/Red_button.png">
+            <button id="image" onclick="clickButton('Red Button')">
+                <image src="./img/Red_button.png" width="50" height="50" alt="Red Button">
+            </button>
+        </div>
+    </form>
+</body>
+
+</html>

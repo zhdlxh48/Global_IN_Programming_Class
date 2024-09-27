@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        var colorPicker = document.getElementById('color');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            colorPicker = document.getElementById('color');
+            // change: 사용자가 값을 변경하고 포커스를 벗어났을 때 발생
+            // input: 사용자가 값을 변경했을 때 발생
+            colorPicker.addEventListener("input", function () {
+                document.body.style.color = colorPicker.value;
+            });
+        });
+    </script>
+
+    <title>색상 입력</title>
+</head>
+
+<body>
+    <h3>컬러 다이얼로그</h3>
+    <hr>
+
+    <form method="get" action="">
+        <label for="color">색 선택</label>
+        <input type="color" name="color" id="color" value="#000000">
+        <!--onchange="document.body.style.color=this.value"-->
+        <input type="submit">
+</body>
+
+</html>

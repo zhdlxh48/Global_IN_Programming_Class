@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온도</title>
+</head>
+
+<body>
+    <h3>홈 제어 시스템</h3>
+    <hr>
+
+    <form action="" method="get">
+        <div>
+            <label for="during_time">지속 시간 (0H - 10H)</label>
+            <input id="during_time" name="during_time" type="number" min="0.0" max="10.0" step="0.5" value="0.0">
+        </div>
+        <div>
+            <label for="temperature">온도 (&deg;C)</label>
+            <input id="temperature" name="temperature" type="range" list="temperatures" min="10" max="30" step="1"
+                value="24">
+            <datalist id="temperatures">
+                <option value="12" label="Low"></option>
+                <option value="20" label="Medium"></option>
+                <option value="28" label="High"></option>
+            </datalist>
+        </div>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
