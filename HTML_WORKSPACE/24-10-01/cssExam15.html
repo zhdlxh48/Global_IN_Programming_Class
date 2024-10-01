@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        div {
+            width: 150px;
+            height: 78px;
+            padding: 10px;
+            margin: 10px;
+            border: 10px solid lightgray;
+            background-image: url("./img/spongebob.png");
+            background-size: 150px 100px;
+            background-repeat: no-repeat;
+        }
+
+        .red-box {
+            box-shadow: 10px 10px red;
+        }
+
+        .blur-effect-box {
+            box-shadow: 10px 10px 5px green;
+        }
+
+        .multi-effect-box {
+            box-shadow:
+                2px 2px 2px black,
+                0px 0px 12px blue,
+                0px 0px 24px orangered;
+        }
+    </style>
+
+    <title>Box Blur Effect</title>
+</head>
+
+<body>
+    <h3>박스 그림자</h3>
+    <hr>
+
+    <div class="red-box"></div>
+    <div class="blur-effect-box"></div>
+    <div class="multi-effect-box"></div>
+</body>
+
+</html>

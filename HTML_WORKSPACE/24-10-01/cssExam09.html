@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .inner {
+            width: 256px;
+            height: 256px;
+            background-color: yellow;
+            padding: 20px;
+            border: 5px dotted red;
+            margin: 30px;
+        }
+
+        .inner>img {
+            transition: 0.5s;
+            filter: invert(0);
+        }
+
+        .inner>img:hover {
+            transition: 0.5s;
+            filter: invert(1);
+        }
+    </style>
+
+    <title>액자 꾸미기</title>
+</head>
+
+<body>
+    <h3>이미지 액자</h3>
+    <p>
+        margin: 30px;<br>
+        padding: 20px;<br>
+        border: 5px red;<br>
+    </p>
+    <hr>
+    <div class="inner">
+        <img src="./img/hiragana_a3.jpg" alt="hinagara a" width="256px">
+    </div>
+</body>
+
+</html>
