@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        div,
+        img {
+            position: absolute;
+        }
+
+        #card-A {
+            z-index: -3;
+            left: 10px;
+            top: 20px;
+        }
+
+        #card-2 {
+            z-index: -2;
+            left: 30px;
+            top: 40px;
+        }
+
+        #card-3 {
+            z-index: -1;
+            left: 50px;
+            top: 60px;
+        }
+
+        #card-7 {
+            z-index: 0;
+            left: 70px;
+            top: 80px;
+        }
+    </style>
+
+    <title>z-index</title>
+</head>
+
+<body>
+    <h3>z-index</h3>
+    <hr>
+
+    <div>
+        <img id="card-A" src="./img/spade-A.png" width="140" height="140">
+        <img id="card-2" src="./img/spade-2.png" width="140" height="140">
+        <img id="card-3" src="./img/spade-3.png" width="140" height="140">
+        <img id="card-7" src="./img/spade-7.png" width="140" height="140">
+    </div>
+</body>
+
+</html>
