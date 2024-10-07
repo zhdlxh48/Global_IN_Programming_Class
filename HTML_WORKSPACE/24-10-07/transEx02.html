@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        div {
+            display: inline-block;
+            padding: 5px;
+            color: white;
+            background-color: olivedrab;
+        }
+
+        #rotate {
+            transform: rotate(200deg);
+        }
+
+        #skew {
+            transform: skew(0deg, -20deg);
+        }
+
+        #translate {
+            transform: translateY(100px);
+        }
+
+        #scale {
+            transform: scale(3, 1);
+        }
+
+        #rotate:hover {
+            transform: rotate(80deg);
+        }
+
+        #skew:hover {
+            transform: skew(0deg, -60deg);
+        }
+
+        #translate:hover {
+            transform: translate(50px, 100px);
+        }
+
+        #scale:hover {
+            transform: scale(4, 2);
+        }
+
+        #rotate:active {
+            transform: rotate(160deg);
+        }
+
+        s
+    </style>
+
+    <title>Multi 전환</title>
+</head>
+
+<body>
+    <h3>멀티 트랜스폼</h3>
+
+    회전(rotate), 기울임(skew), 이동(translate), 확대/축소(scale) 구현
+
+    hover 기능을 추가하여 변화를 줌
+
+    <hr>
+    <div id="rotate"> rotate(200deg)</div>
+    <div id="skew"> skew(0, -20deg)</div>
+    <div id="translate"> translateY(100px)</div>
+    <div id="scale"> scale(3, 1)</div>
+</body>
+
+</html>
