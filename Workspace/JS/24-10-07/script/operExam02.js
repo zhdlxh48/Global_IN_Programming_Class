@@ -11,19 +11,3 @@ var msg = "Hello";
 var num = 1234;
 var result = msg + num;
 document.write("<h2>" + result + "</h2>");
-
-document.write("<table>");
-for (let i = 1; i <= 9; i++) {
-    document.write("<tr>");
-    for (let j = 1; j <= 9; j++) {
-        document.write(`
-            <td style='min-width: 100px; max-width: 120px;'>
-                <div style='display: flex; justify-content: space-between; align-items: center; padding: 4px 12px'>
-                    <span>${i} * ${j}</span>
-                    <span>= ${i * j}</span>
-                </div>
-            </td>`);
-    }
-    document.write("</tr>")
-}
-document.write("</table>");
