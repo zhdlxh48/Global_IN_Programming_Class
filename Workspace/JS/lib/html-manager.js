@@ -5,6 +5,10 @@ class HTMLManager {
     }
 
     toStringFromProps(props) {
+        if (!Array.isArray(props)) {
+            console.error("Please insert array type props");
+            return "";
+        }
         return props.map(elem => {
             return elem.name + "=\"" + elem.value.toString() + "\"";
         });
@@ -48,7 +52,7 @@ class HTMLManager {
         let popTag = this.openedTags.pop();
         if (popTag == undefined)
         {
-            console.log(`There's no tag to close`);
+            console.warn(`There's no tag to close`);
             return;
         }
 
