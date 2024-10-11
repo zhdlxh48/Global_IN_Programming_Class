@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var user_id = prompt("아이디 입력 :", "");
+        if (user_id != "") {
+            alert("안녕하세요." + user_id + "님");
+            var result = confirm("정말로 로그아웃 하시겠습니까?");
+            if (result) {
+                alert("로그아웃 되었습니다.");
+            } else {
+                alert("로그아웃 취소");
+            }
+        } else { alert("아이디를 입력하세요."); }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

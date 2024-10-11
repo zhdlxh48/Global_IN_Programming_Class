@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script>
+        /**
+         * JavaScript의 객체지향
+         * 클래스라는 객체의 설계도를 먼저 작성하고
+         * 클래스에서 객체를 생산해 내는 Java 와는 다르게, 
+         * JavaScript 는 빈 깡통과 같은 객체를 생성하고
+         * 그 안에 변수나 함수를 추가하는 과정으로 객체지향을 구현함 (prototype)
+         * 
+         * JavaScript 에서의 객체의 의미
+         * - 변수, 함수를 개발자의 판단에 다라 하나의 변수에 저장하는 그룹의 단위
+         *   - 객체 안에 포함된 변수 > 멤버 변수
+         *   - 객체 안에 포함된 함수 > 멤버 함수, 메소드
+         */
+
+        // 비어있는 객체 생성
+        let people = {};
+
+        // 객체 안에 멤버 변수 추가
+        people.name = "민선홍";
+        people.gender = "male";
+
+        manager.print(tag.h1, `${people.name}님은 ${people.gender}입니다.`);
+    </script>
+
+    <title></title>
+</head>
+
+<body>
+</body>
+
+</html>

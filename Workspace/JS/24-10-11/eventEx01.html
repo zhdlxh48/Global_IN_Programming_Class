@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <h1>10 + 50 = <span id="result_area">?</span></h1>
+    <input id="result_button" type="button" value="결과">
+
+    <script type="text/javascript">
+        addEventListener("DOMContentLoaded", (e) => {
+            const res_btn = document.getElementById("result_button");
+            const res_area = document.getElementById("result_area");
+
+            res_btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                showResult();
+            });
+
+            function showResult() {
+                let res = sum(10, 50);
+                res_area.innerText = res;
+            }
+
+            function sum(x, y) {
+                return x + y;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

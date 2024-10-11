@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        #my_id {
+            background-color: #ff0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #00f;
+        }
+    </style>
+
+    <script>
+        function doPrint() {
+            document.getElementById("my_id").innerHTML = "Executed Script";
+        }
+    </script>
+
+    <title></title>
+</head>
+
+<body>
+    <h1 id="my_id">안녕하세요!</h1>
+    <h1 id="my_id">자바스크립트 입니다.</h1>
+    <h1 id="my_id">쥰내 재미없죠?</h1>
+
+    <a href="#" onclick="doPrint()">Call JavaScript Method</a>
+</body>
+
+</html>

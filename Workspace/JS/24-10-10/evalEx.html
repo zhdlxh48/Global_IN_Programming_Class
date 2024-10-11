@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        //eval(str) 문자열을 수식으로 변환하여 리턴함
+        var str = "100+1";
+        document.write("<h1>" + str + "</h1>");
+        var result = eval(str);
+        document.write("<h1>" + result + "</h1>");
+        document.write("<hr color=red>");
+        var value = "100";
+        var num1 = Number(value);
+        var num2 = parseInt(value);
+
+        var r1 = value + 1;
+        //문자+숫자=문자
+        var r2 = num1 + 1;
+        //순자+숫자=숫자
+        var r3 = num2 + 1;
+
+        document.write("<h1>" + r1 + "</h1>");
+        document.write("<h1>" + r2 + "</h1>");
+        document.write("<h1>" + r3 + "</h1>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

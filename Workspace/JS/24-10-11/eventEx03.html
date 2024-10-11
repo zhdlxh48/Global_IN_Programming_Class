@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=" UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script type="text/javascript">
+        function insertQuestion() {
+            let operation = prompt("사칙연산의 수식을 입력하세요. (ex: 100 + 50)", "");
+            let res = operation + " = " + eval(operation);
+            document.getElementById("question").innerHTML = res;
+        }
+    </script>
+</head>
+
+<body onload="insertQuestion()">
+    <h1 id="question"></h1>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <h1 id="over_area" onmouseover="" onmouseout="">10 + 50 = <span id="result_area">?</span></h1>
+
+    <script type="text/javascript">
+        addEventListener("DOMContentLoaded", (e) => {
+            const over_area = document.getElementById("over_area");
+            const res_area = document.getElementById("result_area");
+
+            over_area.addEventListener("mouseover", (e) => {
+                showResult();
+            });
+
+            over_area.addEventListener("mouseout", (e) => {
+                hideResult();
+            });
+
+            function showResult() {
+                let res = sum(10, 50);
+                res_area.innerHTML = `<font color="red">${res}</font>`;
+            }
+
+            function hideResult() {
+                res_area.innerText = "?";
+            }
+
+            function sum(x, y) {
+                return x + y;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

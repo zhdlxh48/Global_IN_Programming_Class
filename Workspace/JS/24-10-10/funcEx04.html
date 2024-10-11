@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 리턴값 - 결과를 되돌려 주는 값
+        // 파라미터를 갖는 함수 선언
+        function f(x, y) {
+            var k = x + y;
+            //값이 10보다 작을 경우, 실행을 중단
+            if (k < 10) {
+                return;
+            }
+            return k;
+        }
+        var n = f(10, 20);
+        document.write("<h1>" + n + "</h1>");
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
