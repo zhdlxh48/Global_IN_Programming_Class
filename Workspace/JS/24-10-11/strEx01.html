@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        // 문자열 객체
+        let url = "https://github.com";
+        manager.print(tag.h1, url);
+
+        // 문자열 수 리턴
+        let len = url.length;
+        manager.print(tag.h1, len);
+
+        // 파라미터로 설정된 위치의 글자를 리턴
+        let str2nd = url.charAt(2);
+        manager.print(tag.h1, `두번째 글자: ${str2nd}`);
+
+        // 파라미터로 전달된 글자가 처음 나타나는 위치를 리턴
+        let pos1 = url.indexOf('/');
+        manager.print(tag.h1, `/ 가 처음으로 나타나는 위치: ${pos1}`);
+
+        let pos2 = url.indexOf('/', pos1 + 1);
+        manager.print(tag.h1, `/ 가 두번째로 나타나는 위치: ${pos2}`);
+
+        let pos3 = url.lastIndexOf('/');
+        manager.print(tag.h1, `/ 가 마지막으로 나타나는 위치: ${pos3}`);
+
+        let substr1 = url.substring(0, 5);
+        manager.print(tag.h1, `문자열 자르기: ${substr1}`);
+
+        let substr2 = url.substring(7);
+        manager.print(tag.h1, `문자열 자르기: ${substr2}`);
+
+        let upper = url.toUpperCase();
+        manager.print(tag.h1, `모든 문자를 대문자로: ${upper}`);
+
+        let lower = url.toLowerCase();
+        manager.print(tag.h1, `모든 문자를 소문자로: ${lower}`);
+    </script>
+
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>

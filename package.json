@@ -1,0 +1,11 @@
+{
+  "name": "global_in_programming_class",
+  "version": "1.0.0",
+  "repository": "https://github.com/zhdlxh48/Global_IN_Programming_Class",
+  "author": "zhdlxh48 <zhdlxh48@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js"
+  }
+}

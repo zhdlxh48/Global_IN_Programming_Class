@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        function myFunc() {
+            manager.print(tag.h1, "Hello, JavaScript!");
+        }
+
+        // JavaScript 는 함수와 변수가 동급
+        // 따라서 함수의 이름을 변수에 대입할 수 있음
+        let funcVar = myFunc;
+
+        myFunc();
+        // 함수가 대입된 변수는 그 자신이 함수처럼 동작함
+        funcVar();
+    </script>
+
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>

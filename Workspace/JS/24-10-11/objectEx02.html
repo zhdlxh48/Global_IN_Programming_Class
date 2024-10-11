@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        let people = {};
+
+        people.name = "민선홍";
+        people.gender = "남자"
+
+        // 객체 안에 함수를 추가
+        people.sayName = function () {
+            // 객체 안에 포함된 함수에서, 멤버 변수에 접근하기 위해서는
+            // 반드시 this 라는 키워드를 사용해야 함
+            manager.print(tag.h1, `${this.name}`);
+        }
+        people.sayGender = function () {
+            manager.print(tag.h1, `${this.gender}`);
+        }
+        people.saySometing = function (msg) {
+            manager.print(tag.h1, `${msg}`);
+        }
+
+        people.getName = function () {
+            return this.name;
+        }
+        people.getGender = function () {
+            return this.gender;
+        }
+
+        people.sayInfo = function () {
+            manager.print(tag.h1, `${this.getName()}님은 ${this.getGender()}입니다.`);
+        }
+
+        // 객체 안의 메소드 호출
+        people.sayName();
+        people.sayGender();
+        people.saySometing("야발");
+        people.sayInfo();
+    </script>
+
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
