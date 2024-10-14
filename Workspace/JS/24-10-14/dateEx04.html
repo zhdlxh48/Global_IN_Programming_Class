@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        // 오늘 파라미터를 전달받은 날짜의 D-Day 를 계산하여 리턴한다
+        function getDDay(y, m, d) {
+            // 오늘 날짜
+            let today = new Date();
+
+            // 파라미터로 받은 날짜
+            // 정상적인 날짜값을 받은 경우
+            // JS의 객체에 전달할 때는 월에 -1 해야 함
+            let dDay = new Date(y, m - 1, d);
+
+            // 두 날짜의 차이
+            let diff = dDay.getTime() - today.getTime();
+            return Math.ceil(diff / (24 * 60 * 60 * 1000));
+        }
+
+        let date = new Date();
+
+        let y = date.getFullYear();
+        let m = 12;
+        let d = 31;
+
+        let dDay = getDDay(y, 12, 31);
+
+        manager.print(tag.h2, `${y}/${m}/${d} 까지`);
+
+        if (dDay == 0) {
+            manager.print(tag.h2, "D-Day");
+        } else if (dDay < 0) {
+            manager.print(tag.h2, `${Math.abs(dDay)} - Day`);
+        } else {
+            manager.print(tag.h2, `${Math.abs(dDay)} + Day`);
+        }
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        function printTime() {
+            let days = ["일", "월", "화", "수", "목", "금", "토"];
+
+            let curDate = new Date(); // 현재 시각
+
+            let year = curDate.getFullYear();
+            let month = (curDate.getMonth() + 1).toString().padStart(2, "0");;
+            let date = curDate.getDate().toString().padStart(2, "0");
+            let day = days[curDate.getDay()];
+            let hours = curDate.getHours().toString().padStart(2, "0");
+            let minutes = curDate.getMinutes().toString().padStart(2, "0");
+            let seconds = curDate.getSeconds().toString().padStart(2, "0");
+
+            // 현재 시각 완성
+            let result = `${year}년 ${month}월 ${date}일 (${day}요일) ${hours}:${minutes}:${seconds}`;
+            document.getElementById("timer").innerHTML = result;
+        }
+
+        function startTimer() {
+            setInterval(printTime, 1000);
+        }
+    </script>
+    <title></title>
+</head>
+
+<body onload="startTimer()">
+    <div id="timer"></div>
+</body>
+
+</html>

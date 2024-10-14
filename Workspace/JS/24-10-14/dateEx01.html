@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        // 요일 배열
+        let days = ["일", "월", "화", "수", "목", "금", "토"];
+
+        // Date 객체 생성
+        let myDate = new Date();
+        manager.print(tag.h2, myDate);
+
+        // 년
+        manager.print(tag.h2, `${myDate.getFullYear()}년`);
+
+        // 월 (0 ~ 11, 0부터 시작)
+        manager.print(tag.h2, `${myDate.getMonth() + 1}월`);
+
+        // 일
+        manager.print(tag.h2, `${myDate.getDate()}일`);
+
+        // 요일
+        manager.print(tag.h2, `${days[myDate.getDay()]}요일`);
+
+        // 시간
+        let is12Time = true;
+        let hours = is12Time ?
+            (myDate.getHours() % 12 == 0 ? 12 : myDate.getHours() % 12) :
+            myDate.getHours();
+        manager.print(tag.h2, `${hours}시`);
+
+        // 분, 초
+        let minutes = myDate.getMinutes(), seconds = myDate.getSeconds();
+        manager.print(tag.h2, `${minutes}분`);
+        manager.print(tag.h2, `${seconds}초`);
+
+        manager.print(tag.h2, `${hours}시 ${minutes}분 ${seconds}초`);
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>

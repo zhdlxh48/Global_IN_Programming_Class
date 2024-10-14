@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        let days = ["일", "월", "화", "수", "목", "금", "토"];
+
+        // Date 객체안에 저장된 시각을 임의 변경
+        let myDate = new Date();
+
+        // 2024년 12월 25일
+        let setYear = 2024;
+        let setMonth = 12;
+        let setDate = 25;
+
+        let setHours = 23;
+        let setMinutes = 59;
+        let setSeconds = 59;
+
+        myDate.setFullYear(setYear, setMonth - 1, setDate);
+        // myDate.setMonth(setMonth - 1);
+        // myDate.setDate(setDate);
+
+        myDate.setHours(setHours, setMinutes, setSeconds);
+        // myDate.setMinutes(setMinutes);
+        // myDate.setSeconds(setSeconds);
+
+        let year = myDate.getFullYear();
+        let month = myDate.getMonth() + 1;
+        let date = myDate.getDate();
+        let day = days[myDate.getDay()];
+
+        let is12Time = true;
+        let hours = is12Time ?
+            (myDate.getHours() % 12 == 0 ? 12 : myDate.getHours() % 12) :
+            myDate.getHours();
+        let minutes = myDate.getMinutes(), seconds = myDate.getSeconds();
+
+        manager.print(tag.h2, `${year}년 ${month}월 ${seconds}일 ${day}요일`);
+        manager.print(tag.h2, `${hours}시 ${minutes}분 ${seconds}초`);
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>

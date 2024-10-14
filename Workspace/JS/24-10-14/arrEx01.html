@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        // 하나의 값 안에 여러개의 변수를 그룹화 하는 단위
+        // 각각은 인덱스를 부여받음 (번호)
+
+        let myArr = ["A", "B", "C"];
+
+        manager.print(tag.h2, myArr[0]);
+        manager.print(tag.h2, myArr[1]);
+        manager.print(tag.h2, myArr[2]);
+
+        for (let i = 0; i < 3; i++) {
+            manager.print(tag.h2, myArr[i]);
+        }
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>

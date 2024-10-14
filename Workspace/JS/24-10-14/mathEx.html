@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        let num1 = 100, num2 = 123;
+
+        // 두 수중 최대값을 구함
+        let max = Math.max(num1, num2);
+        manager.print(tag.h1, `최대값: ${num1}, ${num2} -> ${max}`);
+
+        // 두 수중 최소값 구함
+        let min = Math.min(100, 123);
+        manager.print(tag.h1, `최소값: ${num1}, ${num2} -> ${min}`);
+
+        // 원주율
+        manager.print(tag.h1, `원주율: ${Math.PI}`);
+
+        let p = 3.1415;
+
+        // 소수점 반올림
+        manager.print(tag.h1, `소수점 반올림: ${p} -> ${Math.round(p)}`);
+
+        // 소수점 올림과 내림
+        manager.print(tag.h1, `소수점 올림: ${p} -> ${Math.ceil(p)}`);
+        manager.print(tag.h1, `소수점 내림: ${p} -> ${Math.floor(p)}`);
+
+        // 절대값
+        let num3 = -123;
+        let abs = Math.abs(num3);
+        manager.print(tag.h1, `절대값: ${num3} -> ${abs}`);
+
+        // 난수 (JS의 난수 범위: 0.0 ~ 1.0 사이의 값)
+        manager.print(tag.h1, `난수: ${Math.random()}`);
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>

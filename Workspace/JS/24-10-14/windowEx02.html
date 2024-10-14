@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        function open1() {
+            window.open("./windowEx.html");
+        }
+        function open2() {
+            window.open('./windowEx.html', '', 'width=500, height=300, scrollbars=no, toolbar=no, menubar=no, status=no, location=no');
+        }
+        function open3(url) {
+            window.open(url, 'mywin', 'width=300, height=500, scrollbars=no, toolbar=no, menubar=no, status=no, location=no');
+        }
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <h1>Window</h1>
+    <h3>open 메소드</h3>
+    <div>
+        <a href="#" onclick="open1(); return false;">새 창 열기</a>
+        <br>
+
+        <a href="#" onclick="open2(); return false;">팝업 창 열기 (1)</a>
+        <br>
+
+        <!-- 파라미터를 포함한 함수 호출 -->
+        <a href="#" onclick="open3('https://github.com'); return false;">팝업 창 열기 (2)</a>
+        <br>
+
+        <a href="#" onclick="open3('https://google.com'); return false;">팝업 창 열기 (3)</a>
+        <br>
+    </div>
+</body>
+
+</html>

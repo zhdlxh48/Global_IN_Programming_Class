@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        /**
+         * 배열은 행의 개념이 없이 열에 대한 개념만 존재함 - 1차원 배열
+         * 배열의 종류에는 1, 2, 3차원 배열 등 점점 더 많은 형태로 존재함
+         * 이러한 형태를 다차원 배열이라 함
+         * 
+         * 2차원 배열의 생성방법
+         * var arr = new Array(new Array(1, 2, ...), new Array(11, 22, ...), ...);
+         * var arr = [[1, 2, ...], [11, 22, ...], ...];
+         */
+
+        let arr = [["가", "나", "다"], ["A", "B", "C"]]; // 다차원 배열에 값 저장 (초기화)
+
+        // 2차원 배열 값 읽기
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                manager.print(tag.h3, `arr[${i}][${j}]`);
+                manager.print(tag.h2, arr[i][j]);
+            }
+            manager.printSingle(tag.br);
+        }
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
