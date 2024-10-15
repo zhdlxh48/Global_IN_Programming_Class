@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        const imgList = ["버터.webp", "스피키.webp", "헤일리.webp"];
+
+        function setImage(index) {
+            const imgElem = document.querySelector(".view img");
+
+            if (index >= imgList.length) {
+                index = 0;
+                console.error("Out of index");
+                return;
+            }
+            imgElem.setAttribute("src", `./img/${imgList[index]}`);
+        }
+    </script>
+    <style>
+        .thumbnail {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            width: 120px;
+            float: left;
+        }
+
+        .thumbnail li {
+            width: 100px;
+            height: 100px;
+            padding: 5px 10px;
+        }
+
+        .thumbnail img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .view {
+            float: left;
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 320px;
+            pad: 5px 0px;
+        }
+
+        .view img {
+            height: 320px;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <ul class="thumbnail">
+        <li><a href="#" onclick="setImage(0)"><img src="./img/버터.webp"></a></li>
+        <li><a href="#" onclick="setImage(1)"><img src="./img/스피키.webp"></a></li>
+        <li><a href=" #" onclick="setImage(2)"><img src="./img/헤일리.webp"></a></li>
+    </ul>
+
+    <div class="view">
+        <img id="target" src="./img/버터.webp">
+    </div>
+</body>
+
+</html>

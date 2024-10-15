@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        // 두 수 사이의 난수를 return 하는 함수
+        function rand(x, y) {
+            return Math.floor(Math.random() * (y - x + 1) + x);
+        }
+
+        // 5자리 인증번호를 id 값이 "auth" 인 요소에 출력
+        function getAuth() {
+            let value = "";
+            for (let i = 0; i < 5; i++) {
+                value += rand(0, 9);
+            }
+
+            return value;
+        }
+
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+
+        async function showAuth() {
+            let authArr = getAuth().split('');
+
+            for (let i = 0; i < authArr.length; i++) {
+                document.querySelector("#auth").innerHTML += "X";
+            }
+
+            for (let i = 0; i < authArr.length; i++) {
+                document.querySelector("#auth").innerHTML = "";
+                for (let j = 0; j <= i; j++) {
+                    document.querySelector("#auth").innerHTML += authArr[j];
+                }
+                for (let j = i + 1; j < authArr.length; j++) {
+                    document.querySelector("#auth").innerHTML += "X";
+                }
+                await delay(500);
+            }
+        }
+
+        // 페이지 refresh
+        function refresh() {
+            location.reload();
+        }
+    </script>
+    <style>
+        #auth {
+            font-weight: bold;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body onload="showAuth()">
+    <div>
+        Auth Number: <span id="auth">XXXXX</span>
+    </div>
+
+    <button onclick="refresh()">Refresh</button>
+</body>
+
+</html>

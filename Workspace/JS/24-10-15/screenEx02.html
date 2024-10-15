@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        // 화면의 중심좌표를 가로/세로 형태의 배열로 return 하는 함수를 구현하기
+        function getScreenCenterPixel() {
+            return [
+                parseInt(Math.round(screen.availWidth / 2)),
+                parseInt(Math.round(screen.availHeight / 2))
+            ];
+        }
+        function getScreenCenterPixelObj() {
+            return {
+                x: parseInt(Math.round(screen.availWidth / 2)),
+                y: parseInt(Math.round(screen.availHeight / 2))
+            };
+        }
+
+        // let center = getScreenCenterPixel();
+        // manager.print(tag.h1, `화면의 중심 좌표 (픽셀): x - ${center[0]}px / y - ${center[1]}px`);
+        let center = getScreenCenterPixelObj();
+        manager.print(tag.h1, `화면의 중심 좌표 (픽셀): x - ${center.x}px / y - ${center.y}px`);
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
