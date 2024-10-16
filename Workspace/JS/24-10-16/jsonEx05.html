@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        let sayHello = {
+            "name": "JS",
+            "eng": () => {
+                const console = document.querySelector("#console");
+                console.innerHTML = "Hello, World!";
+                console.style.color = "#f00";
+            },
+            "kor": () => {
+                const console = document.querySelector("#console");
+                console.innerHTML = "안녕, 월드!";
+                console.style.color = "#0f0";
+            },
+            "jpn": function () {
+                const console = document.querySelector("#console");
+                console.innerHTML = "こんにちは、ワルド!";
+                console.style.color = "#00f";
+            }
+        };
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <h1>JSON으로 그룹화된 함수 호출하기</h1>
+    <button onclick="sayHello.eng()">Say ENG</button>
+    <button onclick="sayHello.kor()">Say KOR</button>
+    <button onclick="sayHello.jpn()">Say JPN</button>
+    <h1 id="console"></h1>
+</body>
+
+</html>

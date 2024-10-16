@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        // 서브 데이터 요소로서 json을 포함하고 있는 json 데이터
+        let keyword_rank = {
+            "r1": {
+                "keyword": "HTML5",
+                "symbol": "+",
+                "v": 178
+            },
+            "r2": {
+                "keyword": "CSS",
+                "symbol": "new",
+                "v": 99
+            },
+            "r3": {
+                "keyword": "JS",
+                "symbol": "-",
+                "v": 18
+            },
+        };
+
+        // json 데이터의 내용을 목록 정의 태그로 구성
+        let tagData = `
+            <h1>인기 검색어 순위</h1>
+            <ul>
+                <li>${keyword_rank.r1.keyword} (${keyword_rank.r1.symbol}${keyword_rank.r1.v})</li>
+                <li>${keyword_rank.r2.keyword} (${keyword_rank.r2.symbol}${keyword_rank.r2.v})</li>
+                <li>${keyword_rank.r3.keyword} (${keyword_rank.r3.symbol}${keyword_rank.r3.v})</li>
+            </ul>`;
+
+        document.write(tagData);
+
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>

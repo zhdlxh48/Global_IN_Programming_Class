@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./lib/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        function init() {
+            // const h1 = document.querySelector("#hello");
+            // h1.style.color = "#0000ff";
+            // h1.style.backgroundColor = "#d5d5d5";
+            // h1.style.fontSize = "50px";
+            // h1.style.padding = "15px";
+            // h1.style.margin = "0px";
+            // h1.innerHTML = "Hello, jQuery!";
+
+            // const h1 = $("#hello");
+            // h1.css("color", "#0000ff");
+            // h1.html("Hello, jQuery!");
+        }
+
+        // jQuery(init);
+
+        $(() => {
+            $("#hello")
+                .html("Hello, jQuery!")
+                .css("color", "#0000ff")
+                .css("backgroundColor", "#d5d5d5")
+                .css("fontSize", "50px")
+                .css("padding", "15px")
+                .css("margin", "0px");
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <h1 id="hello"></h1>
+</body>
+
+</html>

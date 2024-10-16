@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        const initCompany = () => {
+            let company = {
+                "name": "개졸리네",
+                "since": 1999,
+                "department": ["A팀", "B팀", "C팀"],
+                "business": ["a개발", "b개발", "c개발"]
+            }
+
+            const nameElem = document.querySelector("#name");
+            nameElem.innerHTML = company.name;
+            const sinceElem = document.querySelector("#since");
+            sinceElem.innerHTML = company.since;
+
+            // 부서출력 반복문
+            const departListElem = document.querySelector("#department");
+            let departInnerText = ""
+            for (let i = 0; i < company.department.length; i++) {
+                const liElem = company.department[i];
+                departInnerText += `<li>${liElem}</li>\n`;
+            }
+            departListElem.innerHTML = departInnerText;
+
+            // 부서출력 반복문
+            const bizListElem = document.querySelector("#business");
+            let bizInnerText = ""
+            for (let i = 0; i < company.business.length; i++) {
+                const liElem = company.business[i];
+                bizInnerText += `<li>${liElem}</li>\n`;
+            }
+            bizListElem.innerHTML = bizInnerText;
+        };
+    </script>
+    <title></title>
+</head>
+
+<body onload="initCompany()">
+    <h1 id="name"></h1>
+    <p>
+        <strong>설립년도: </strong><span id="since"></span>
+    </p>
+    <h2>주요 사업부서</h2>
+    <ul id="department">
+
+    </ul>
+
+    <h2>주요 사업분야</h2>
+    <ul id="business">
+
+    </ul>
+
+</body>
+
+</html>

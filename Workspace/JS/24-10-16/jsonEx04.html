@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        // 게시판 데이터 표현
+        const data = {
+            "title": "JavaScript Sibal",
+            "desc": "tlqkf",
+            "total": 4,
+            "item": [
+                { "no": "공지sibva", "subject": "yabal", "view": 3, "date": "24-10-16" },
+                { "no": "sibva2일차", "subject": "yabal2", "view": 31, "date": "24-11-16" },
+                { "no": "sibva3", "subject": "yabal3", "view": 32, "date": "24-11-28" },
+                { "no": "sibva4", "subject": "yabal4", "view": 3, "date": "24-11-28" },
+            ]
+        };
+
+        // data 안의 각 독립된 값들에 대한 출력 HTML 생성
+        let html = `
+            <h1>${data.title}</h1>
+            <p>${data.desc}</p>
+            <p>총 게시물: ${data.desc}</p>`;
+
+        html += "<ul>";
+        for (let i = 0; i < data.item.length; i++) {
+            const elem = data.item[i];
+            html += `<li>${elem.no}/${elem.subject}/${elem.view}/${elem.date}</li>`;
+        }
+        html += "</ul>";
+
+        document.write(html);
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>

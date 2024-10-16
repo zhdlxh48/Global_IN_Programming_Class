@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/html-manager.js"></script>
+    <script type="text/javascript">
+        /*
+            json (javascript object notation)
+            - 경량 데이터 교환방식
+
+            json 데이터를 만들 때 빈 객체 안에 배열과 같이 , 로 구별하여
+            여러개의 값을 하나의 객체 안에 포함시킴
+        */
+
+        let info = {
+            "name": "Seonhong Min",
+            "age": 25,
+            "gender": "male"
+        };
+
+        manager.print(tag.h1, `${info.name}`);
+        manager.print(tag.h1, `${info.age}`);
+        manager.print(tag.h1, `${info.gender}`);
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
