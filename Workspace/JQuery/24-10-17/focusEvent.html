@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../css/event.css">
+
+    <script type="text/javascript" src="../lib/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(() => {
+            $("#input").children("input").filter("[type=text]").blur(() => {
+                $("#result").html("Out of Focus");
+            });
+
+            // DOM 로드 시 자동 포커스
+            $("#input").children("input").filter("[type=text]").focus();
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <h1>Key Event</h1>
+    <div id="input">
+        <input type="text">
+    </div>
+    <h2>Result</h2>
+    <div id="result"></div>
+</body>
+
+</html>

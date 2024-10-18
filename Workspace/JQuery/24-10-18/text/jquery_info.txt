@@ -1,0 +1,4 @@
+jQuery는 브라우저 호환성이 뛰어난 js 라이브러리이며 Client Side 언어를 단순화 할 수 있도록 설계 되었다
+존 레식이 2006년 뉴욕시 바 캠프 (Barcamp NYC) 에서 공식적으로 발표했다
+jQuery는 오늘날 가장 많이 쓰이는 자바스크립트 라이브러리 중 하나이다
+jQuery는 MIT License와 GNU General Public License v2.0 의 듀얼 라이선스를 가진 자유 오픈 소프트웨어이다

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../lib/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(() => {
+            $("button").filter(":eq(1)").click(() => {
+                $("#box").animate({
+                    'left': '250px'
+                }, 1000, 'swing', () => {
+                    alert("End");
+                });
+            });
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <button>졸려</button>
+</body>
+
+</html>

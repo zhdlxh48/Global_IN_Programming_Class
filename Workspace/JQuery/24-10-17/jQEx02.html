@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div#container {
+            width: auto;
+            border: 5px solid #ff00ff;
+            padding: 10px;
+        }
+
+        div#container>h1#title {
+            background-color: #ffff00;
+            padding: 10px;
+        }
+
+        div#container div.box {
+            padding: 10px;
+            background-color: #ffff00;
+            font: 20px '궁서체';
+        }
+
+        div#container>ul {
+            list-style: none;
+            padding: 10px;
+            margin: 0px;
+            width: auto;
+            border: 5px solid #00ff00;
+        }
+
+        div#container>ul>li:first-child,
+        div#container>ul>li:last-child {
+            border: 3px dotted red;
+            padding: 3px 10px;
+        }
+
+        pre {
+            font: 14px/130% 'Courier New';
+            background-color: #eee;
+            padding: 10px 20px;
+            margin: 10 auto;
+            border: 1px solid #555;
+            border-radius: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="../lib/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(() => {
+            // id 이용
+            $("#title").html("두번째 제목");
+
+            // 자식 선택자 이용
+            // $("#container > #title").html("제목입니다");
+            $("#container").children("#title").html("제목입니다");
+
+            // 자손 선택자 이용
+            $("#container .box").html("아 개졸리다 진짜");
+
+            // 자식 선택자 이용해 모든 li 태그 지정
+            // $("ul > li").html("목록 입니다.");
+            $("ul").children("li").html("목록 입니다.");
+
+            // 두번쨰 li 태그만 지정
+            // $("ul > li:eq(1)");
+            $("ul").children("li:eq(1)").html("jQuery 방식");
+
+            $("p, pre").html("다중 요소 선택");
+
+            // name 속성이 source 인 요소
+            $("pre[name='source']").html("CSS 선택자");
+
+            // $("ul > li:first-child").html("First Child");
+            // $("ul > li:last-child").html("Last Child");
+            $("ul").children("li").first().html("First Child");
+            $("ul").children("li").last().html("Last Child");
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="title"></h1>
+        <div class="box"></div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <p></p>
+        <pre></pre>
+        <pre id="source"></pre>
+    </div>
+</body>
+
+</html>

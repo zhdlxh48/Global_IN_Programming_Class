@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <script type="text/javascript" src="../lib/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../lib/jquery.slides.min.js"></script>
+    <script type="text/javascript">
+        $(main);
+
+        function main() {
+            $("#slides").slidesjs({
+                "width": 800,
+                "height": 300,
+                "play": {
+                    "active": true,
+                    "auto": true,
+                    "interval": 1000,
+                    "swap": true
+                },
+                "effect": {
+                    "slide": {
+                        "speed": 2000
+                    }
+                }
+            })
+        }
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <h1 class="title">Image</h1>
+    <div class="example">
+        <div id="slides">
+            <img src="./img/slide-1.jpg">
+            <img src="./img/slide-2.jpg">
+            <img src="./img/slide-3.jpg">
+            <img src="./img/slide-4.jpg">
+        </div>
+    </div>
+</body>
+
+</html>

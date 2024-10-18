@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../css/event.css">
+
+    <script type="text/javascript" src="../lib/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(() => {
+            $("input").filter("[name=user_name]").change((e) => {
+                $("#result").html("이름 값이 변경되었습니다.");
+            });
+
+            $("input").filter("[name=hobby]").change(() => {
+                $("#result").html("취미 값이 변경되었습니다.");
+            });
+
+            $("input").filter("[name=gender]").change(() => {
+                $("#result").html("성별 값이 변경되었습니다.");
+            });
+
+            $("select").filter("[name=job]").change(() => {
+                $("#result").html("직업 값이 변경되었습니다.");
+            });
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+
+    <body>
+        <h1>Change Event</h1>
+        <div id="input">
+            <legend>회원가입</legend>
+            <h3 for="">이름</h3>
+            <input type="text" name="user_name">
+            <h3 for="">성별</h3>
+            <label for=""><input type="radio" name="gender" value="M">남자</label>
+            <label for=""><input type="radio" name="gender" value="F">여자</label>
+            <h3 for="">직업</h3>
+            <select name="job" id="">
+                <option value="">-직업을 선택하세요.-</option>
+                <option value="dev">프로그래머</option>
+                <option value="pub">퍼블리셔</option>
+            </select>
+            <label for="">취미</label>
+            <label for=""><input type="checkbox" value="축구" name="hobby">축구</label>
+            <label for=""><input type="checkbox" value="농구" name="hobby">농구</label>
+            <label for=""><input type="checkbox" value="야구" name="hobby">야구</label>
+            <label for="">&nbsp;</label>
+            <input type="submit" value="제출" name="button1">
+            <input type="button" value="리셋" name="button2">
+            </fieldset>
+        </div>
+        <h2>결과</h2>
+        <div id="result">
+        </div>
+    </body>
+
+</html>
+</body>
+
+</html>

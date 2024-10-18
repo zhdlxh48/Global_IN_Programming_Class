@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../css/event.css">
+
+    <script type="text/javascript" src="../lib/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(() => {
+            const my_form = $("form").filter("[name=form1]");
+            my_form.submit((event) => {
+                const res = confirm("저장할거에요?");
+                if (res) {
+                    my_form.submit();
+                }
+                else {
+                    event.preventDefault();
+                }
+            });
+
+            $("input").filter("[type=reset]").click((event) => {
+                const res = confirm("취소할거에요?");
+                if (!res) {
+                    event.preventDefault();
+                }
+            })
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <h1>Register</h1>
+    <form action="form_ok.page.html" method="get" name="form1">
+        <div id="input">
+            <h3>당신의 이름은 무엇입니까</h3>
+            <input type="text" name="user_name" required>
+            <input class="myButton" type="submit" value="저장">
+            <input class="myButton" type="reset" value="초기화">
+        </div>
+    </form>
+</body>
+
+</html>

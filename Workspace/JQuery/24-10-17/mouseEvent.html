@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/event.css">
+    <script type="text/javascript" src="../lib/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(() => {
+            /*
+            // 마우스 버튼을 누를 때
+            $("#input").mousedown(() => {
+                $("#result").html("눌렀음");
+            });
+            // 마우스 버튼을 뗐을 때
+            $("#input").mouseup(() => {
+                $("#result").html("뗐음");
+            });
+
+            // 마우스 버튼이 들어올 때
+            $("#input").mouseenter(() => {
+                $("#result").html("들어옴");
+            });
+            // 마우스 버튼이 빠져나갔을 때
+            $("#input").mouseleave(() => {
+                $("#result").html("나감");
+            });
+            
+
+            // Click Event
+            $("#input").click(() => {
+                $("#result").html("click");
+            });
+            $("#input").dblclick(() => {
+                $("#result").html("dbclick");
+            });
+            */
+
+            // Hover Event
+            $("#input").hover(() => {
+                $("#result").html("enter");
+            }, () => {
+                $("#result").html("leave");
+            });
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <h1>마우스 이벤트</h1>
+    <div id="input">
+        야발야발
+    </div>
+    <h2>결과</h2>
+    <div id="result"></div>
+</body>
+
+</html>

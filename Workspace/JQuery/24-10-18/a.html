@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #252422;
+        }
+
+        ul {
+            padding: 0;
+            margin: 50px auto;
+            list-style: none;
+            width: 800px;
+        }
+
+        .collapsible {
+            background: url();
+        }
+
+        .title {
+            padding: 0;
+            margin: 0;
+        }
+
+        .title>a {
+            display: block;
+            padding-top: 12px;
+            font-size: 14px;
+            text-indent: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            height: 23px;
+            background: url("./img/hanburger.jpg");
+            background-size: contain;
+        }
+
+        .content {
+            margin: 0;
+            background-color: #d4d0c8;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+        }
+
+        .selected {}
+    </style>
+    <script type="text/javascript" src="../lib/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(() => {
+
+        })
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <ul>
+        <li class="collapsible">
+            <h2 class="title"><a href="text/html5_info.txt">HTML5</a></h2>
+            <p class="container"></p>
+        </li>
+        <li class="collapsible">
+            <h2 class="title"><a href="text/jquery_info.txt">jQuery</a></h2>
+            <p class="container"></p>
+        </li>
+        <li class="collapsible">
+            <h2 class="title"><a href="text/bootstrap_info.txt">Bootstrap</a></h2>
+            <p class="container"></p>
+        </li>
+    </ul>
+</body>
+
+</html>

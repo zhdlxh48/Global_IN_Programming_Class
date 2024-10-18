@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../css/event.css">
+
+    <script type="text/javascript" src="../lib/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(() => {
+            const user_id_input = $("input").filter("[name=user_id]");
+            const user_gender_input = $("input").filter("[name=user_gender]");
+
+            $("form").submit((e) => {
+                if (!user_id_input.val()) {
+                    alert("아이디 입력 안함");
+                    user_id_input.focus();
+                    e.preventDefault();
+                }
+                if (!user_gender_input.is(":checked")) {
+                    alert("성별 선택 안함");
+                    user_gender_input.focus();
+                    e.preventDefault();
+                }
+
+                const user_id = user_id_input.val();
+                const user_gender = user_gender_input.val();
+
+                let result = "<ul>";
+                result += `<li>아이디: ${user_id}`;
+                result += `<li>성별: ${user_gender}`;
+                result += "</ul>";
+                $("body").html(result);
+            });
+        });
+    </script>
+    <title></title>
+</head>
+
+<body>
+    <form action="" method="get" name="form1">
+        <div id="input">
+            <h1>회원가입</h1>
+            <div id="register_box" class="vertical_box">
+                <div class="element">
+                    <label for="user_id">아이디</label>
+                    <div class="input_box">
+                        <input id="user_id" name="user_id" type="text">
+                    </div>
+                </div>
+                <div class="element">
+                    <label for="user_pw">패스워드</label>
+                    <div class="input_box">
+                        <input id="user_pw" name="user_pw" type="password">
+                    </div>
+                </div>
+                <div class="element">
+                    <label for="user_cert">주민등록번호</label>
+                    <div class="input_box">
+                        <input id="user_cert" class="cert_box" name="user_cert" type="text">
+                    </div>
+                </div>
+                <div class="element">
+                    <label for="user_email">이메일</label>
+                    <div class="input_box">
+                        <input id="user_email" name="user_email" type="email">
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Optional</legend>
+                    <div id="optional_box" class="vertical_box">
+                        <div class="element">
+                            <label>성별</label>
+                            <div class="input_box">
+                                <label for="user_gender_male">남자</label>
+                                <input id="user_gender_male" name="user_gender" type="radio" value="male">
+
+                                <label for="user_gender_female">여자</label>
+                                <input id="user_gender_female" name="user_gender" type="radio" value="female">
+                            </div>
+                        </div>
+                        <div class="element">
+                            <label for="user_url">Homepage</label>
+                            <div class="input_box">
+                                <input id="user_url" name="user_url" type="url">
+                            </div>
+                        </div>
+                        <div class="element">
+                            <label for="user_tel">Tel</label>
+                            <div class="input_box">
+                                <input id="user_tel" name="user_tel" type="tel">
+                            </div>
+                        </div>
+                        <div class="element">
+                            <label>취미</label>
+                            <div class="input_box">
+                                <label for="user_hobby_soccer">축구</label>
+                                <input id="user_hobby_soccer" name="user_hobby" type="checkbox">
+                                <label for="user_hobby_baseball">야구</label>
+                                <input id="user_hobby_baseball" name="user_hobby" type="checkbox">
+                                <label for="user_hobby_basketball">농구</label>
+                                <input id="user_hobby_basketball" name="user_hobby" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="element">
+                            <label for="user_job">직업</label>
+                            <select name="user_job" id="user_job">
+                                <div class="input_box">
+                                    <option value="job_programmer">프로그래머</option>
+                                    <option value="job_publisher">퍼블리셔</option>
+                                    <option value="job_designer">디자이너</option>
+                                    <option value="job_webdesigner">웹기획자</option>
+                                </div>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <input id="register_btn" type="submit" value="회원가입">
+                <input id="reset_btn" type="reset" value="재작성">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
